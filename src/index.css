@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+  --color-sage: #DCE8D2;
+  --color-forest: #234D35;
+  --color-forest-btn: #28583C;
+  --color-lime-accent: #C6DE8B;
+  --color-pale-card: #EDF3E5;
+  --color-ink: #193B29;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #DCE8D2;
+    color: #193B29;
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #DCE8D2;
+    color: #193B29;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Outfit", system-ui, -apple-system, sans-serif;
+  }
+}
+
+.sage-botanical-bg {
+  background-color: #DCE8D2;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23234D35' stroke-opacity='0.06' stroke-width='1.5'%3E%3Cpath d='M25 32c8-12 22-12 24-10 2 2 2 16-10 24-12 8-14-14-14-14z'/%3E%3Cpath d='M25 32l14-14'/%3E%3Ccircle cx='90' cy='28' r='10'/%3E%3Cpath d='M90 14v4M94 16l-2 3'/%3E%3Cpath d='M76 86c0-10 8-18 18-18 0 10-8 18-18 18z'/%3E%3Cpath d='M22 92l12-22 10 18z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}

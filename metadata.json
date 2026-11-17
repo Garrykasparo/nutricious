@@ -1,0 +1,6 @@
+{
+  "name": "Nutricious H&D — Comida real, vida mejor",
+  "description": "Plataforma web de Nutricious H&D en Mérida, Yucatán. Desayunos saludables, jugos funcionales, ensaladas y planes semanales con entregas Turbo Mandados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
